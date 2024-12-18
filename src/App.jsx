@@ -34,9 +34,9 @@ function App() {
       <img className="mt-12" src="./images/logo.svg" alt="logo" />
       <div className="bg-white rounded-t-3xl py-8 px-6 flex flex-col gap-8 w-full max-w-card shadow-card md:p-8 md:gap-11 md:flex-row md:rounded-3xl">
         <div className="w-full flex flex-col gap-10 px-3 md:gap-11 md:my-4 md:px-0">
-          <Input placeholder="0" label="Bill" icon="./images/icon-dollar.svg" error={isZero(bill)?'Can\'t be zero':''} onChange={(e) => setBill(e.target.value)} value={bill} />
+          <Input name="bill" placeholder="0" label="Bill" icon="./images/icon-dollar.svg" error={isZero(bill)?'Can\'t be zero':''} onChange={(e) => setBill(e.target.value)} value={bill} />
           <TipInput label="Select Tip %" placeholder="Custom" onChange={setTip} tip={tip} />
-          <Input placeholder="0" label="Number of People" icon="./images/icon-person.svg" error={isZero(people)?'Can\'t be zero':''} onChange={(e) => setPeople(e.target.value)} value={people} />
+          <Input name="number-of-people" placeholder="0" label="Number of People" icon="./images/icon-person.svg" error={isZero(people)?'Can\'t be zero':''} onChange={(e) => setPeople(e.target.value)} value={people} />
         </div>
         <div className="w-full rounded-2xl pt-11 pb-6 px-6 flex flex-col gap-6 bg-very-dark-cyan grow md:gap-12 md:pt-14 md:pb-10 md:px-10">
           <TipLine title="Tip Amount" subtitle="/ person" featured={`$${tipPerPerson.toFixed(2)}`} />
